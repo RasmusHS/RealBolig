@@ -38,15 +38,15 @@ namespace RealBolig
             this.button12 = new System.Windows.Forms.Button();
             this.btnMægler = new System.Windows.Forms.Button();
             this.panelKunderSubMenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnSubMenuSletKunde = new System.Windows.Forms.Button();
+            this.btnSubMenuOpdaterKunde = new System.Windows.Forms.Button();
+            this.btnSubMenuIndlæsKunde = new System.Windows.Forms.Button();
+            this.btnSubMenuOpretKunde = new System.Windows.Forms.Button();
             this.btnKunder = new System.Windows.Forms.Button();
             this.panelBoligSubMenu = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSubMenuSletBolig = new System.Windows.Forms.Button();
+            this.btnSubMenuOpdaterBolig = new System.Windows.Forms.Button();
+            this.btnSubMenuIndlæsBolig = new System.Windows.Forms.Button();
             this.btnSubMenuOpretBolig = new System.Windows.Forms.Button();
             this.btnBolig = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@ namespace RealBolig
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 915);
+            this.panelMenu.Size = new System.Drawing.Size(230, 927);
             this.panelMenu.TabIndex = 0;
             // 
             // btnHjælp
@@ -94,7 +94,7 @@ namespace RealBolig
             this.btnHjælp.Location = new System.Drawing.Point(0, 815);
             this.btnHjælp.Name = "btnHjælp";
             this.btnHjælp.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnHjælp.Size = new System.Drawing.Size(220, 60);
+            this.btnHjælp.Size = new System.Drawing.Size(230, 60);
             this.btnHjælp.TabIndex = 10;
             this.btnHjælp.Text = "   Hjælp";
             this.btnHjælp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,7 +112,7 @@ namespace RealBolig
             this.panelMæglerSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMæglerSubMenu.Location = new System.Drawing.Point(0, 650);
             this.panelMæglerSubMenu.Name = "panelMæglerSubMenu";
-            this.panelMæglerSubMenu.Size = new System.Drawing.Size(220, 165);
+            this.panelMæglerSubMenu.Size = new System.Drawing.Size(230, 165);
             this.panelMæglerSubMenu.TabIndex = 9;
             // 
             // button9
@@ -127,7 +127,7 @@ namespace RealBolig
             this.button9.Location = new System.Drawing.Point(0, 120);
             this.button9.Name = "button9";
             this.button9.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button9.Size = new System.Drawing.Size(220, 40);
+            this.button9.Size = new System.Drawing.Size(230, 40);
             this.button9.TabIndex = 3;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +145,7 @@ namespace RealBolig
             this.button10.Location = new System.Drawing.Point(0, 80);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(220, 40);
+            this.button10.Size = new System.Drawing.Size(230, 40);
             this.button10.TabIndex = 2;
             this.button10.Text = "button10";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,7 +163,7 @@ namespace RealBolig
             this.button11.Location = new System.Drawing.Point(0, 40);
             this.button11.Name = "button11";
             this.button11.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(220, 40);
+            this.button11.Size = new System.Drawing.Size(230, 40);
             this.button11.TabIndex = 1;
             this.button11.Text = "button11";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,7 +181,7 @@ namespace RealBolig
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(220, 40);
+            this.button12.Size = new System.Drawing.Size(230, 40);
             this.button12.TabIndex = 0;
             this.button12.Text = "button12";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,7 +199,7 @@ namespace RealBolig
             this.btnMægler.Location = new System.Drawing.Point(0, 590);
             this.btnMægler.Name = "btnMægler";
             this.btnMægler.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnMægler.Size = new System.Drawing.Size(220, 60);
+            this.btnMægler.Size = new System.Drawing.Size(230, 60);
             this.btnMægler.TabIndex = 8;
             this.btnMægler.Text = "   Mæglere";
             this.btnMægler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,87 +210,91 @@ namespace RealBolig
             // panelKunderSubMenu
             // 
             this.panelKunderSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelKunderSubMenu.Controls.Add(this.button5);
-            this.panelKunderSubMenu.Controls.Add(this.button6);
-            this.panelKunderSubMenu.Controls.Add(this.button7);
-            this.panelKunderSubMenu.Controls.Add(this.button8);
+            this.panelKunderSubMenu.Controls.Add(this.btnSubMenuSletKunde);
+            this.panelKunderSubMenu.Controls.Add(this.btnSubMenuOpdaterKunde);
+            this.panelKunderSubMenu.Controls.Add(this.btnSubMenuIndlæsKunde);
+            this.panelKunderSubMenu.Controls.Add(this.btnSubMenuOpretKunde);
             this.panelKunderSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelKunderSubMenu.Location = new System.Drawing.Point(0, 425);
             this.panelKunderSubMenu.Name = "panelKunderSubMenu";
-            this.panelKunderSubMenu.Size = new System.Drawing.Size(220, 165);
+            this.panelKunderSubMenu.Size = new System.Drawing.Size(230, 165);
             this.panelKunderSubMenu.TabIndex = 7;
             // 
-            // button5
+            // btnSubMenuSletKunde
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Location = new System.Drawing.Point(0, 120);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(220, 40);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "button5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSubMenuSletKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuSletKunde.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuSletKunde.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuSletKunde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuSletKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuSletKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuSletKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuSletKunde.Location = new System.Drawing.Point(0, 120);
+            this.btnSubMenuSletKunde.Name = "btnSubMenuSletKunde";
+            this.btnSubMenuSletKunde.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuSletKunde.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuSletKunde.TabIndex = 3;
+            this.btnSubMenuSletKunde.Text = "Slet Kunde";
+            this.btnSubMenuSletKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuSletKunde.UseVisualStyleBackColor = true;
+            this.btnSubMenuSletKunde.Click += new System.EventHandler(this.btnSubMenuSletKunde_Click);
             // 
-            // button6
+            // btnSubMenuOpdaterKunde
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button6.Location = new System.Drawing.Point(0, 80);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(220, 40);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "button6";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpdaterKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuOpdaterKunde.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuOpdaterKunde.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpdaterKunde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpdaterKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuOpdaterKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuOpdaterKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuOpdaterKunde.Location = new System.Drawing.Point(0, 80);
+            this.btnSubMenuOpdaterKunde.Name = "btnSubMenuOpdaterKunde";
+            this.btnSubMenuOpdaterKunde.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuOpdaterKunde.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuOpdaterKunde.TabIndex = 2;
+            this.btnSubMenuOpdaterKunde.Text = "Opdater Kunde";
+            this.btnSubMenuOpdaterKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuOpdaterKunde.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpdaterKunde.Click += new System.EventHandler(this.btnSubMenuOpdaterKunde_Click);
             // 
-            // button7
+            // btnSubMenuIndlæsKunde
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button7.Location = new System.Drawing.Point(0, 40);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(220, 40);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "button7";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSubMenuIndlæsKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuIndlæsKunde.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuIndlæsKunde.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuIndlæsKunde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuIndlæsKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuIndlæsKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuIndlæsKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuIndlæsKunde.Location = new System.Drawing.Point(0, 40);
+            this.btnSubMenuIndlæsKunde.Name = "btnSubMenuIndlæsKunde";
+            this.btnSubMenuIndlæsKunde.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuIndlæsKunde.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuIndlæsKunde.TabIndex = 1;
+            this.btnSubMenuIndlæsKunde.Text = "Indlæs Kunde";
+            this.btnSubMenuIndlæsKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuIndlæsKunde.UseVisualStyleBackColor = true;
+            this.btnSubMenuIndlæsKunde.Click += new System.EventHandler(this.btnSubMenuIndlæsKunde_Click);
             // 
-            // button8
+            // btnSubMenuOpretKunde
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(220, 40);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpretKunde.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuOpretKunde.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuOpretKunde.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpretKunde.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpretKunde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuOpretKunde.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuOpretKunde.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuOpretKunde.Location = new System.Drawing.Point(0, 0);
+            this.btnSubMenuOpretKunde.Name = "btnSubMenuOpretKunde";
+            this.btnSubMenuOpretKunde.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuOpretKunde.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuOpretKunde.TabIndex = 0;
+            this.btnSubMenuOpretKunde.Text = "Opret Kunde";
+            this.btnSubMenuOpretKunde.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuOpretKunde.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpretKunde.Click += new System.EventHandler(this.btnSubMenuOpretKunde_Click);
             // 
             // btnKunder
             // 
@@ -304,7 +308,7 @@ namespace RealBolig
             this.btnKunder.Location = new System.Drawing.Point(0, 365);
             this.btnKunder.Name = "btnKunder";
             this.btnKunder.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnKunder.Size = new System.Drawing.Size(220, 60);
+            this.btnKunder.Size = new System.Drawing.Size(230, 60);
             this.btnKunder.TabIndex = 6;
             this.btnKunder.Text = "   Kunder";
             this.btnKunder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -315,69 +319,72 @@ namespace RealBolig
             // panelBoligSubMenu
             // 
             this.panelBoligSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelBoligSubMenu.Controls.Add(this.button4);
-            this.panelBoligSubMenu.Controls.Add(this.button3);
-            this.panelBoligSubMenu.Controls.Add(this.button2);
+            this.panelBoligSubMenu.Controls.Add(this.btnSubMenuSletBolig);
+            this.panelBoligSubMenu.Controls.Add(this.btnSubMenuOpdaterBolig);
+            this.panelBoligSubMenu.Controls.Add(this.btnSubMenuIndlæsBolig);
             this.panelBoligSubMenu.Controls.Add(this.btnSubMenuOpretBolig);
             this.panelBoligSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBoligSubMenu.Location = new System.Drawing.Point(0, 200);
             this.panelBoligSubMenu.Name = "panelBoligSubMenu";
-            this.panelBoligSubMenu.Size = new System.Drawing.Size(220, 165);
+            this.panelBoligSubMenu.Size = new System.Drawing.Size(230, 165);
             this.panelBoligSubMenu.TabIndex = 5;
             // 
-            // button4
+            // btnSubMenuSletBolig
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Location = new System.Drawing.Point(0, 120);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(220, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSubMenuSletBolig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuSletBolig.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuSletBolig.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuSletBolig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuSletBolig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuSletBolig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuSletBolig.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuSletBolig.Location = new System.Drawing.Point(0, 120);
+            this.btnSubMenuSletBolig.Name = "btnSubMenuSletBolig";
+            this.btnSubMenuSletBolig.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuSletBolig.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuSletBolig.TabIndex = 3;
+            this.btnSubMenuSletBolig.Text = "Slet Bolig";
+            this.btnSubMenuSletBolig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuSletBolig.UseVisualStyleBackColor = true;
+            this.btnSubMenuSletBolig.Click += new System.EventHandler(this.btnSubMenuSletBolig_Click);
             // 
-            // button3
+            // btnSubMenuOpdaterBolig
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(0, 80);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(220, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpdaterBolig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuOpdaterBolig.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuOpdaterBolig.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpdaterBolig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuOpdaterBolig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuOpdaterBolig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuOpdaterBolig.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuOpdaterBolig.Location = new System.Drawing.Point(0, 80);
+            this.btnSubMenuOpdaterBolig.Name = "btnSubMenuOpdaterBolig";
+            this.btnSubMenuOpdaterBolig.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuOpdaterBolig.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuOpdaterBolig.TabIndex = 2;
+            this.btnSubMenuOpdaterBolig.Text = "Opdater Bolig";
+            this.btnSubMenuOpdaterBolig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuOpdaterBolig.UseVisualStyleBackColor = true;
+            this.btnSubMenuOpdaterBolig.Click += new System.EventHandler(this.btnSubMenuOpdaterBolig_Click);
             // 
-            // button2
+            // btnSubMenuIndlæsBolig
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Location = new System.Drawing.Point(0, 40);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(220, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSubMenuIndlæsBolig.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSubMenuIndlæsBolig.FlatAppearance.BorderSize = 0;
+            this.btnSubMenuIndlæsBolig.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuIndlæsBolig.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSubMenuIndlæsBolig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubMenuIndlæsBolig.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubMenuIndlæsBolig.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnSubMenuIndlæsBolig.Location = new System.Drawing.Point(0, 40);
+            this.btnSubMenuIndlæsBolig.Name = "btnSubMenuIndlæsBolig";
+            this.btnSubMenuIndlæsBolig.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.btnSubMenuIndlæsBolig.Size = new System.Drawing.Size(230, 40);
+            this.btnSubMenuIndlæsBolig.TabIndex = 1;
+            this.btnSubMenuIndlæsBolig.Text = "Indlæs Bolig";
+            this.btnSubMenuIndlæsBolig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSubMenuIndlæsBolig.UseVisualStyleBackColor = true;
+            this.btnSubMenuIndlæsBolig.Click += new System.EventHandler(this.btnReadBolig_Click);
             // 
             // btnSubMenuOpretBolig
             // 
@@ -391,12 +398,12 @@ namespace RealBolig
             this.btnSubMenuOpretBolig.Location = new System.Drawing.Point(0, 0);
             this.btnSubMenuOpretBolig.Name = "btnSubMenuOpretBolig";
             this.btnSubMenuOpretBolig.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnSubMenuOpretBolig.Size = new System.Drawing.Size(220, 40);
+            this.btnSubMenuOpretBolig.Size = new System.Drawing.Size(230, 40);
             this.btnSubMenuOpretBolig.TabIndex = 0;
             this.btnSubMenuOpretBolig.Text = "Opret Bolig";
             this.btnSubMenuOpretBolig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubMenuOpretBolig.UseVisualStyleBackColor = true;
-            this.btnSubMenuOpretBolig.Click += new System.EventHandler(this.button1_Click);
+            this.btnSubMenuOpretBolig.Click += new System.EventHandler(this.btnCreateBolig_Click);
             // 
             // btnBolig
             // 
@@ -410,7 +417,7 @@ namespace RealBolig
             this.btnBolig.Location = new System.Drawing.Point(0, 140);
             this.btnBolig.Name = "btnBolig";
             this.btnBolig.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnBolig.Size = new System.Drawing.Size(220, 60);
+            this.btnBolig.Size = new System.Drawing.Size(230, 60);
             this.btnBolig.TabIndex = 2;
             this.btnBolig.Text = "   Bolig";
             this.btnBolig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -430,7 +437,7 @@ namespace RealBolig
             this.btnHome.Location = new System.Drawing.Point(0, 80);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(220, 60);
+            this.btnHome.Size = new System.Drawing.Size(230, 60);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "   Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -445,7 +452,7 @@ namespace RealBolig
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.Size = new System.Drawing.Size(230, 80);
             this.panelLogo.TabIndex = 0;
             // 
             // label1
@@ -464,9 +471,9 @@ namespace RealBolig
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(993, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1046, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // lblTitle
@@ -475,7 +482,7 @@ namespace RealBolig
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(423, 23);
+            this.lblTitle.Location = new System.Drawing.Point(450, 23);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(85, 29);
             this.lblTitle.TabIndex = 0;
@@ -486,16 +493,16 @@ namespace RealBolig
             this.panelFormsLoader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(30)))), ((int)(((byte)(51)))));
             this.panelFormsLoader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelFormsLoader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormsLoader.Location = new System.Drawing.Point(220, 80);
+            this.panelFormsLoader.Location = new System.Drawing.Point(230, 80);
             this.panelFormsLoader.Name = "panelFormsLoader";
-            this.panelFormsLoader.Size = new System.Drawing.Size(993, 835);
+            this.panelFormsLoader.Size = new System.Drawing.Size(1046, 847);
             this.panelFormsLoader.TabIndex = 2;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 915);
+            this.ClientSize = new System.Drawing.Size(1276, 927);
             this.Controls.Add(this.panelFormsLoader);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -524,9 +531,9 @@ namespace RealBolig
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelBoligSubMenu;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSubMenuSletBolig;
+        private System.Windows.Forms.Button btnSubMenuOpdaterBolig;
+        private System.Windows.Forms.Button btnSubMenuIndlæsBolig;
         private System.Windows.Forms.Button btnSubMenuOpretBolig;
         private System.Windows.Forms.Button btnHjælp;
         private System.Windows.Forms.Panel panelMæglerSubMenu;
@@ -536,10 +543,10 @@ namespace RealBolig
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button btnMægler;
         private System.Windows.Forms.Panel panelKunderSubMenu;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnSubMenuSletKunde;
+        private System.Windows.Forms.Button btnSubMenuOpdaterKunde;
+        private System.Windows.Forms.Button btnSubMenuIndlæsKunde;
+        private System.Windows.Forms.Button btnSubMenuOpretKunde;
         private System.Windows.Forms.Button btnKunder;
         private System.Windows.Forms.Panel panelFormsLoader;
     }

@@ -31,8 +31,8 @@ namespace RealBolig
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabBoligTabel = new System.Windows.Forms.TabPage();
-            this.tabBoligStatusTabel = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabKundeTabel = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -54,16 +54,17 @@ namespace RealBolig
             this.btnOpretBolig = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabBoligTabel.SuspendLayout();
-            this.tabBoligStatusTabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabKundeTabel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tabControl1.Controls.Add(this.tabBoligTabel);
-            this.tabControl1.Controls.Add(this.tabBoligStatusTabel);
-            this.tabControl1.Location = new System.Drawing.Point(527, 52);
+            this.tabControl1.Controls.Add(this.tabKundeTabel);
+            this.tabControl1.Location = new System.Drawing.Point(537, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(481, 630);
@@ -80,17 +81,6 @@ namespace RealBolig
             this.tabBoligTabel.Text = "Bolig Tabel";
             this.tabBoligTabel.UseVisualStyleBackColor = true;
             // 
-            // tabBoligStatusTabel
-            // 
-            this.tabBoligStatusTabel.Controls.Add(this.dataGridView2);
-            this.tabBoligStatusTabel.Location = new System.Drawing.Point(4, 22);
-            this.tabBoligStatusTabel.Name = "tabBoligStatusTabel";
-            this.tabBoligStatusTabel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBoligStatusTabel.Size = new System.Drawing.Size(473, 604);
-            this.tabBoligStatusTabel.TabIndex = 1;
-            this.tabBoligStatusTabel.Text = "Bolig Status Tabel";
-            this.tabBoligStatusTabel.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -100,6 +90,17 @@ namespace RealBolig
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(467, 598);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // tabKundeTabel
+            // 
+            this.tabKundeTabel.Controls.Add(this.dataGridView2);
+            this.tabKundeTabel.Location = new System.Drawing.Point(4, 22);
+            this.tabKundeTabel.Name = "tabKundeTabel";
+            this.tabKundeTabel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabKundeTabel.Size = new System.Drawing.Size(473, 604);
+            this.tabKundeTabel.TabIndex = 1;
+            this.tabKundeTabel.Text = "Kunde Tabel";
+            this.tabKundeTabel.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -113,9 +114,10 @@ namespace RealBolig
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(36, 74);
+            this.label1.Location = new System.Drawing.Point(56, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 26);
             this.label1.TabIndex = 1;
@@ -123,25 +125,28 @@ namespace RealBolig
             // 
             // maskedTextBox1
             // 
+            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox1.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(132, 74);
+            this.maskedTextBox1.Location = new System.Drawing.Point(152, 66);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox1.TabIndex = 2;
             // 
             // maskedTextBox2
             // 
+            this.maskedTextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox2.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(132, 125);
+            this.maskedTextBox2.Location = new System.Drawing.Point(152, 117);
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox2.TabIndex = 4;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 125);
+            this.label2.Location = new System.Drawing.Point(56, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 26);
             this.label2.TabIndex = 3;
@@ -149,17 +154,19 @@ namespace RealBolig
             // 
             // maskedTextBox3
             // 
+            this.maskedTextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox3.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(132, 178);
+            this.maskedTextBox3.Location = new System.Drawing.Point(152, 170);
             this.maskedTextBox3.Name = "maskedTextBox3";
             this.maskedTextBox3.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox3.TabIndex = 6;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 178);
+            this.label3.Location = new System.Drawing.Point(56, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 26);
             this.label3.TabIndex = 5;
@@ -167,17 +174,19 @@ namespace RealBolig
             // 
             // maskedTextBox4
             // 
+            this.maskedTextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox4.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(132, 234);
+            this.maskedTextBox4.Location = new System.Drawing.Point(152, 226);
             this.maskedTextBox4.Name = "maskedTextBox4";
             this.maskedTextBox4.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox4.TabIndex = 8;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 234);
+            this.label4.Location = new System.Drawing.Point(56, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 26);
             this.label4.TabIndex = 7;
@@ -185,17 +194,19 @@ namespace RealBolig
             // 
             // maskedTextBox5
             // 
+            this.maskedTextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox5.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox5.Location = new System.Drawing.Point(132, 293);
+            this.maskedTextBox5.Location = new System.Drawing.Point(152, 285);
             this.maskedTextBox5.Name = "maskedTextBox5";
             this.maskedTextBox5.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox5.TabIndex = 10;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(36, 293);
+            this.label5.Location = new System.Drawing.Point(56, 285);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 26);
             this.label5.TabIndex = 9;
@@ -203,17 +214,19 @@ namespace RealBolig
             // 
             // maskedTextBox6
             // 
+            this.maskedTextBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox6.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(132, 353);
+            this.maskedTextBox6.Location = new System.Drawing.Point(152, 345);
             this.maskedTextBox6.Name = "maskedTextBox6";
             this.maskedTextBox6.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox6.TabIndex = 12;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(36, 353);
+            this.label6.Location = new System.Drawing.Point(56, 345);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 26);
             this.label6.TabIndex = 11;
@@ -221,17 +234,19 @@ namespace RealBolig
             // 
             // maskedTextBox7
             // 
+            this.maskedTextBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox7.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox7.Location = new System.Drawing.Point(132, 410);
+            this.maskedTextBox7.Location = new System.Drawing.Point(152, 402);
             this.maskedTextBox7.Name = "maskedTextBox7";
             this.maskedTextBox7.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox7.TabIndex = 14;
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 410);
+            this.label7.Location = new System.Drawing.Point(56, 402);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 26);
             this.label7.TabIndex = 13;
@@ -239,17 +254,19 @@ namespace RealBolig
             // 
             // maskedTextBox8
             // 
+            this.maskedTextBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.maskedTextBox8.Font = new System.Drawing.Font("Montserrat", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox8.Location = new System.Drawing.Point(132, 517);
+            this.maskedTextBox8.Location = new System.Drawing.Point(152, 517);
             this.maskedTextBox8.Name = "maskedTextBox8";
             this.maskedTextBox8.Size = new System.Drawing.Size(330, 30);
             this.maskedTextBox8.TabIndex = 16;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(36, 517);
+            this.label8.Location = new System.Drawing.Point(56, 517);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 26);
             this.label8.TabIndex = 15;
@@ -257,8 +274,9 @@ namespace RealBolig
             // 
             // btnForslåPris
             // 
+            this.btnForslåPris.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnForslåPris.Font = new System.Drawing.Font("Montserrat Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForslåPris.Location = new System.Drawing.Point(211, 446);
+            this.btnForslåPris.Location = new System.Drawing.Point(235, 438);
             this.btnForslåPris.Name = "btnForslåPris";
             this.btnForslåPris.Size = new System.Drawing.Size(152, 40);
             this.btnForslåPris.TabIndex = 17;
@@ -267,8 +285,9 @@ namespace RealBolig
             // 
             // btnOpretBolig
             // 
+            this.btnOpretBolig.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOpretBolig.Font = new System.Drawing.Font("Montserrat Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpretBolig.Location = new System.Drawing.Point(211, 553);
+            this.btnOpretBolig.Location = new System.Drawing.Point(235, 553);
             this.btnOpretBolig.Name = "btnOpretBolig";
             this.btnOpretBolig.Size = new System.Drawing.Size(152, 40);
             this.btnOpretBolig.TabIndex = 18;
@@ -304,8 +323,8 @@ namespace RealBolig
             this.Load += new System.EventHandler(this.CreateBolig_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabBoligTabel.ResumeLayout(false);
-            this.tabBoligStatusTabel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabKundeTabel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,7 +335,7 @@ namespace RealBolig
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabBoligTabel;
-        private System.Windows.Forms.TabPage tabBoligStatusTabel;
+        private System.Windows.Forms.TabPage tabKundeTabel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
