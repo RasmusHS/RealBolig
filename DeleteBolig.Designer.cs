@@ -29,6 +29,7 @@ namespace RealBolig
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSletBolig = new System.Windows.Forms.Button();
             this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,16 +47,20 @@ namespace RealBolig
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.kaspermark_dk_db_realboligDataSet1 = new RealBolig.kaspermark_dk_db_realboligDataSet1();
+            this.boligBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.boligTableAdapter = new RealBolig.kaspermark_dk_db_realboligDataSet1TableAdapters.BoligTableAdapter();
+            this.biDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kiDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postNRDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.områdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salgsPrisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salgsDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kaspermark_dk_db_realboligDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSletBolig
@@ -229,65 +234,88 @@ namespace RealBolig
             this.label1.TabIndex = 37;
             this.label1.Text = "label1";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(537, 41);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(481, 630);
-            this.tabControl1.TabIndex = 54;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(473, 604);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.biDDataGridViewTextBoxColumn,
+            this.kiDDataGridViewTextBoxColumn,
+            this.postNRDataGridViewTextBoxColumn,
+            this.adresseDataGridViewTextBoxColumn,
+            this.områdeDataGridViewTextBoxColumn,
+            this.salgsPrisDataGridViewTextBoxColumn,
+            this.salgsDatoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.boligBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(542, 66);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(467, 598);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Size = new System.Drawing.Size(466, 725);
+            this.dataGridView1.TabIndex = 54;
             // 
-            // tabPage2
+            // kaspermark_dk_db_realboligDataSet1
             // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(473, 604);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.kaspermark_dk_db_realboligDataSet1.DataSetName = "kaspermark_dk_db_realboligDataSet1";
+            this.kaspermark_dk_db_realboligDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dataGridView2
+            // boligBindingSource
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(467, 598);
-            this.dataGridView2.TabIndex = 0;
+            this.boligBindingSource.DataMember = "Bolig";
+            this.boligBindingSource.DataSource = this.kaspermark_dk_db_realboligDataSet1;
+            // 
+            // boligTableAdapter
+            // 
+            this.boligTableAdapter.ClearBeforeFill = true;
+            // 
+            // biDDataGridViewTextBoxColumn
+            // 
+            this.biDDataGridViewTextBoxColumn.DataPropertyName = "BiD";
+            this.biDDataGridViewTextBoxColumn.HeaderText = "BiD";
+            this.biDDataGridViewTextBoxColumn.Name = "biDDataGridViewTextBoxColumn";
+            this.biDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kiDDataGridViewTextBoxColumn
+            // 
+            this.kiDDataGridViewTextBoxColumn.DataPropertyName = "KiD";
+            this.kiDDataGridViewTextBoxColumn.HeaderText = "KiD";
+            this.kiDDataGridViewTextBoxColumn.Name = "kiDDataGridViewTextBoxColumn";
+            // 
+            // postNRDataGridViewTextBoxColumn
+            // 
+            this.postNRDataGridViewTextBoxColumn.DataPropertyName = "PostNR";
+            this.postNRDataGridViewTextBoxColumn.HeaderText = "PostNR";
+            this.postNRDataGridViewTextBoxColumn.Name = "postNRDataGridViewTextBoxColumn";
+            // 
+            // adresseDataGridViewTextBoxColumn
+            // 
+            this.adresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.HeaderText = "Adresse";
+            this.adresseDataGridViewTextBoxColumn.Name = "adresseDataGridViewTextBoxColumn";
+            // 
+            // områdeDataGridViewTextBoxColumn
+            // 
+            this.områdeDataGridViewTextBoxColumn.DataPropertyName = "Område";
+            this.områdeDataGridViewTextBoxColumn.HeaderText = "Område";
+            this.områdeDataGridViewTextBoxColumn.Name = "områdeDataGridViewTextBoxColumn";
+            // 
+            // salgsPrisDataGridViewTextBoxColumn
+            // 
+            this.salgsPrisDataGridViewTextBoxColumn.DataPropertyName = "SalgsPris";
+            this.salgsPrisDataGridViewTextBoxColumn.HeaderText = "SalgsPris";
+            this.salgsPrisDataGridViewTextBoxColumn.Name = "salgsPrisDataGridViewTextBoxColumn";
+            // 
+            // salgsDatoDataGridViewTextBoxColumn
+            // 
+            this.salgsDatoDataGridViewTextBoxColumn.DataPropertyName = "SalgsDato";
+            this.salgsDatoDataGridViewTextBoxColumn.HeaderText = "SalgsDato";
+            this.salgsDatoDataGridViewTextBoxColumn.Name = "salgsDatoDataGridViewTextBoxColumn";
             // 
             // DeleteBolig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 789);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSletBolig);
             this.Controls.Add(this.maskedTextBox8);
             this.Controls.Add(this.label8);
@@ -308,11 +336,9 @@ namespace RealBolig
             this.Name = "DeleteBolig";
             this.Text = "DeleteBolig";
             this.Load += new System.EventHandler(this.DeleteBolig_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kaspermark_dk_db_realboligDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boligBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,10 +363,16 @@ namespace RealBolig
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private kaspermark_dk_db_realboligDataSet1 kaspermark_dk_db_realboligDataSet1;
+        private System.Windows.Forms.BindingSource boligBindingSource;
+        private kaspermark_dk_db_realboligDataSet1TableAdapters.BoligTableAdapter boligTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn biDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kiDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn postNRDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn områdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salgsPrisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salgsDatoDataGridViewTextBoxColumn;
     }
 }
